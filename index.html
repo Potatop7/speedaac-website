@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Athletic Acceleration Camp | Speed & Agility Training</title>
-  <meta name="description" content="Become the fastest on the field. Science-backed youth athletic speed, agility, and quickness training camps.">
+  <meta name="description"
+    content="Become the fastest on the field. Science-backed youth athletic speed, agility, and quickness training camps.">
   <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -64,8 +65,8 @@
         <div class="hero-visual reveal">
           <div class="hero-img-container">
             <img src="assets/hero_athlete.webp"
-              alt="Youth athlete in a blue soccer uniform, running with speed and agility through a quickness ladder on a grass athletic field" class="hero-img" width="500"
-              height="500" loading="eager">
+              alt="Youth athlete in a blue soccer uniform, running with speed and agility through a quickness ladder on a grass athletic field"
+              class="hero-img" width="500" height="500" loading="eager">
             <div class="hero-badge">
               <div class="hero-badge-title">PT Clinical Insight</div>
               <div class="hero-badge-value">700+ Hours</div>
@@ -174,8 +175,8 @@
         <div class="about-visual reveal">
           <div class="about-img-frame">
             <img src="assets/coach_portrait.webp"
-              alt="Professional speed and agility training coach, a athlete with muscle definition, demonstrating agility while running" class="about-img" width="450"
-              height="450" loading="lazy">
+              alt="Professional speed and agility training coach, a athlete with muscle definition, demonstrating agility while running"
+              class="about-img" width="450" height="450" loading="lazy">
           </div>
         </div>
       </div>
@@ -206,9 +207,9 @@
             <a href="#book" class="btn btn-secondary select-prog-btn" data-program="1on1">Apply for 1-on-1</a>
           </article>
 
-          <!-- Program 2: Camp (Featured) -->
+          <!-- Program 2: Camp Session 1 (Featured) -->
           <article class="prog-card featured">
-            <span class="badge-featured" id="featured-tag">CAMP SPOTLIGHT</span>
+            <span class="badge-featured">CAMP SPOTLIGHT</span>
             <div class="prog-meta">
               <span class="prog-dates">July 13th – July 17th</span>
               <h3 class="prog-title">AAC Speed & Agility Camp</h3>
@@ -221,7 +222,27 @@
               <li class="prog-feat-item">Camera Analysis</li>
               <li class="prog-feat-item">$399</li>
             </ul>
-            <a href="#book" class="btn btn-primary select-prog-btn" data-program="camp">Secure Your Camp Spot</a>
+            <a href="#book" class="btn btn-primary select-prog-btn" data-program="camp-july13">Secure July 13-17
+              Spot</a>
+          </article>
+
+          <!-- Program 3: Camp Session 2 (Featured) -->
+          <article class="prog-card featured">
+            <span class="badge-featured">NEW SESSION</span>
+            <div class="prog-meta">
+              <span class="prog-dates">July 20th – July 24th</span>
+              <h3 class="prog-title">AAC Speed & Agility Camp</h3>
+            </div>
+            <p class="prog-desc">A premier, high-intensity week-long camp engineered to revolutionize an athlete's
+              linear speed, lateral change-of-direction, and multi-directional explosiveness.</p>
+            <ul class="prog-features">
+              <li class="prog-feat-item">Limited slots for competitive edge</li>
+              <li class="prog-feat-item">2hr sessions for 5 days</li>
+              <li class="prog-feat-item">Camera Analysis</li>
+              <li class="prog-feat-item">$399</li>
+            </ul>
+            <a href="#book" class="btn btn-primary select-prog-btn" data-program="camp-july20">Secure July 20-24
+              Spot</a>
           </article>
         </div>
       </div>
@@ -264,13 +285,8 @@
             <button class="btn btn-secondary" id="success-close-btn">Done</button>
           </div>
 
-          <form class="booking-form" id="booking-form" action="https://api.web3forms.com/submit" method="POST"
-            novalidate>
-            <!-- Web3Forms Access Key -->
-            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
-            <input type="hidden" name="subject" value="New AAC Athlete Application">
-            <input type="hidden" name="from_name" value="AAC Website">
-
+          <form class="booking-form" id="booking-form" name="booking" data-netlify="true" method="POST">
+            <input type="hidden" name="form-name" value="booking" />
             <div class="form-group">
               <label for="form-name" class="form-label">Athlete's Name</label>
               <input type="text" id="form-name" name="Athletes Name" class="form-input" placeholder="e.g. John Doe"
@@ -279,7 +295,7 @@
 
             <div class="form-group">
               <label for="form-email" class="form-label">Email Address</label>
-              <input type="email" id="form-email" name="Email Adress" class="form-input"
+              <input type="email" id="form-email" name="Email Address" class="form-input"
                 placeholder="e.g. john@gmail.com" required>
             </div>
 
@@ -300,7 +316,8 @@
               <select id="form-program" name="Training program type" class="form-select" required>
                 <option value="" disabled selected>Select a program</option>
                 <option value="1on1">1-on-1 Athletic Training</option>
-                <option value="camp">July Speed & Agility Camp</option>
+                <option value="camp-july13">July Speed & Agility Camp (July 13 - 17)</option>
+                <option value="camp-july20">July Speed & Agility Camp (July 20 - 24)</option>
               </select>
             </div>
 
@@ -343,7 +360,7 @@
           </svg>
         </a>-->
         <!-- Instagram Icon -->
-       <!-- <a href="#" class="social-icon" aria-label="AAC Instagram">
+        <!-- <a href="#" class="social-icon" aria-label="AAC Instagram">
           <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
             <path
               d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
@@ -351,8 +368,8 @@
         </a>
       </div> -->
 
-      <p class="copyright-text">&copy; 2026 Acceleration Athletic Camp. All rights reserved.</p>
-    </div>
+        <p class="copyright-text">&copy; 2026 Acceleration Athletic Camp. All rights reserved.</p>
+      </div>
   </footer>
 
   <script src="app.js"></script>
