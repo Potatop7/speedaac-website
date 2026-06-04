@@ -54,24 +54,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const formData = new FormData(bookingForm);
 
-      // Perform AJAX submission to Netlify
-      fetch("/", {
+      // Your clean Formspark AJAX submission code
+      fetch("https://submit-form.com/zgfbkEusP", {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+          "Accept": "application/json"
+        },
         body: new URLSearchParams(formData).toString()
       })
-      .then((response) => {
-        if (response.ok) {
+        .then((response) => {
+          if (response.ok) {
+            successOverlay.classList.add('active');
+          } else {
+            throw new Error("Form submission failed.");
+          }
+        })
+        .catch((error) => {
+          console.error("Submission error:", error);
+          // Fallback for offline or local testing if network fails
           successOverlay.classList.add('active');
-        } else {
-          throw new Error("Form submission failed.");
-        }
-      })
-      .catch((error) => {
-        console.error("Submission error:", error);
-        // Fallback for offline or local testing if network fails
-        successOverlay.classList.add('active');
-      });
+        });
     });
 
     if (successCloseBtn) {
