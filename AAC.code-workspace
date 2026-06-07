@@ -1,10 +1,30 @@
 {
-	"folders": [
-		{
-			"path": "."
-		},
-		{
-			"path": "."
-		}
-	]
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2,
+    "editor.wordWrap": "on",
+    "files.associations": {
+      "*.css": "css",
+      "*.js": "javascript",
+      "*.html": "html"
+    },
+    "css.validate": true,
+    "html.format.indentHandlebars": false,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "liveServer.settings.port": 5500
+  },
+  "extensions": {
+    "recommendations": [
+      "ritwickdey.liveserver",
+      "esbenp.prettier-vscode",
+      "dbaeumer.vscode-eslint",
+      "formulahendry.auto-rename-tag",
+      "bradlc.vscode-tailwindcss"
+    ]
+  }
 }
